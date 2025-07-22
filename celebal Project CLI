@@ -1,0 +1,202 @@
+Requesting a Cloud Shell.Succeeded.
+Connecting terminal...
+
+Welcome to Azure Cloud Shell
+
+Type "az" to use Azure CLI
+Type "help" to learn about Cloud Shell
+
+aditya [ ~ ]$ az ssh vm --resource-group celebalProjectRG --vm-name celebalProjectVM --subscription ab9a689d-1ce0-43a4-ab29-dae5b3fac42e
+OpenSSH_9.8p1, OpenSSL 3.3.3 11 Feb 2025
+The authenticity of host '172.183.242.237 (172.183.242.237)' can't be established.
+ED25519 key fingerprint is SHA256:Yqvc/7Y590bCSok3sbwKRBCLaO2RtFemyn+MdF6yh3c.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '172.183.242.237' (ED25519) to the list of known hosts.
+Learned new hostkey: RSA SHA256:SP6pVaPqSzIObaoXMqdpm0/xrd8WS2bKrLk4HgHrvks
+                                                                           Learned new hostkey: ECDSA SHA256:jlM2uuZ7S4XH9kyBrlopdanZhlN0bs/4T8ZnV5fc/v4
+                                                                                                                                                        Adding new key for 172.183.242.237 to /home/aditya/.ssh/known_hosts: ssh-rsa SHA256:SP6pVaPqSzIObaoXMqdpm0/xrd8WS2bKrLk4HgHrvks
+                                                                                                            Adding new key for 172.183.242.237 to /home/aditya/.ssh/known_hosts: ecdsa-sha2-nistp256 SHA256:jlM2uuZ7S4XH9kyBrlopdanZhlN0bs/4T8ZnV5fc/v4
+                                                                            Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.11.0-1018-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Jul 18 10:50:56 UTC 2025
+
+  System load:  0.2               Processes:             111
+  Usage of /:   6.4% of 28.02GB   Users logged in:       0
+  Memory usage: 30%               IPv4 address for eth0: 10.0.0.4
+  Swap usage:   0%
+
+Expanded Security Maintenance for Applications is not enabled.
+
+24 updates can be applied immediately.
+12 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+$ sudo apt update
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+docker --version
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+docker --version
+Hit:1 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease
+Hit:5 https://packages.microsoft.com/repos/microsoft-ubuntu-noble-prod noble InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+29 packages can be upgraded. Run 'apt list --upgradable' to see them.
+$ docker --version
+-sh: 2: docker: not found
+$ sudo apt install docker.io -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base pigz runc ubuntu-fan
+Suggested packages:
+  ifupdown aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-buildx docker-compose-v2 docker-doc rinse zfs-fuse | zfsutils
+The following NEW packages will be installed:
+  bridge-utils containerd dns-root-data dnsmasq-base docker.io pigz runc ubuntu-fan
+0 upgraded, 8 newly installed, 0 to remove and 29 not upgraded.
+Need to get 79.2 MB of archives.
+After this operation, 300 MB of additional disk space will be used.
+Get:1 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 pigz amd64 2.8-1 [65.6 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 bridge-utils amd64 1.7.1-1ubuntu2 [33.9 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 runc amd64 1.2.5-0ubuntu1~24.04.1 [8043 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 containerd amd64 1.7.27-0ubuntu1~24.04.1 [37.7 MB]
+Get:5 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 dns-root-data all 2024071801~ubuntu0.24.04.1 [5918 B]
+Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 dnsmasq-base amd64 2.90-2ubuntu0.1 [376 kB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 docker.io amd64 27.5.1-0ubuntu3~24.04.2 [33.0 MB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 ubuntu-fan all 0.12.16+24.04.1 [34.2 kB]
+Fetched 79.2 MB in 3s (23.5 MB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 67923 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.8-1_amd64.deb ...
+Unpacking pigz (2.8-1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../1-bridge-utils_1.7.1-1ubuntu2_amd64.deb ...
+Unpacking bridge-utils (1.7.1-1ubuntu2) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../2-runc_1.2.5-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking runc (1.2.5-0ubuntu1~24.04.1) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../3-containerd_1.7.27-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking containerd (1.7.27-0ubuntu1~24.04.1) ...
+Selecting previously unselected package dns-root-data.
+Preparing to unpack .../4-dns-root-data_2024071801~ubuntu0.24.04.1_all.deb ...
+Unpacking dns-root-data (2024071801~ubuntu0.24.04.1) ...
+Selecting previously unselected package dnsmasq-base.
+Preparing to unpack .../5-dnsmasq-base_2.90-2ubuntu0.1_amd64.deb ...
+Unpacking dnsmasq-base (2.90-2ubuntu0.1) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../6-docker.io_27.5.1-0ubuntu3~24.04.2_amd64.deb ...
+Unpacking docker.io (27.5.1-0ubuntu3~24.04.2) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../7-ubuntu-fan_0.12.16+24.04.1_all.deb ...
+Unpacking ubuntu-fan (0.12.16+24.04.1) ...
+Setting up dnsmasq-base (2.90-2ubuntu0.1) ...
+Setting up runc (1.2.5-0ubuntu1~24.04.1) ...
+Setting up dns-root-data (2024071801~ubuntu0.24.04.1) ...
+Setting up bridge-utils (1.7.1-1ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+Setting up pigz (2.8-1) ...
+Setting up containerd (1.7.27-0ubuntu1~24.04.1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /usr/lib/systemd/system/containerd.service.
+Setting up ubuntu-fan (0.12.16+24.04.1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /usr/lib/systemd/system/ubuntu-fan.service.
+Setting up docker.io (27.5.1-0ubuntu3~24.04.2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+info: Selecting GID from range 100 to 999 ...
+info: Adding group `docker' (GID 114) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /usr/lib/systemd/system/docker.socket.
+Processing triggers for dbus (1.14.10-4ubuntu4.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+$ sudo systemctl start docker
+$ sudo systemctl enable docker
+$ docker --version
+Docker version 27.5.1, build 27.5.1-0ubuntu3~24.04.2
+$ docker pull nginx
+Using default tag: latest
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.47/images/create?fromImage=nginx&tag=latest": dial unix /var/run/docker.sock: connect: permission denied
+$ sudo docker pull nginx
+Using default tag: latest
+latest: Pulling from library/nginx
+3da95a905ed5: Pull complete
+037111f539a0: Pull complete
+1e537b66692c: Pull complete
+d3618cedc15e: Pull complete
+63b1ad245775: Pull complete
+40c013bb3d47: Pull complete
+ec5daaed1d0a: Pull complete
+Digest: sha256:f5c017fb33c6db484545793ffb67db51cdd7daebee472104612f73a85063f889
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+$ sudo docker run -d -p 80:80 --name my-nginx nginx
+6eeac496a446ea4652fb42f00c14ab80729aa09b83b77d7602ab8482ea25e46a
+$ docker --version
+Docker version 27.5.1, build 27.5.1-0ubuntu3~24.04.2
+$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED      STATUS      PORTS                               NAMES
+6eeac496a446   nginx     "/docker-entrypoint.…"   4 days ago   Up 4 days   0.0.0.0:80->80/tcp, :::80->80/tcp   my-nginx
+$ sudo docker run -d -p 8080:80 --name nginx2 nginx
+f54159a1fea16eb900c98bdf3982a73a843adb2df1d6c7a1a72bc20ae5973e23
+$ sudo docker pull nginx:latest
+latest: Pulling from library/nginx
+59e22667830b: Pull complete
+140da4f89dcb: Pull complete
+96e47e70491e: Pull complete
+2ef442a3816e: Pull complete
+4b1e45a9989f: Pull complete
+1d9f51194194: Pull complete
+f30ffbee4c54: Pull complete
+Digest: sha256:84ec966e61a8c7846f509da7eb081c55c1d56817448728924a87ab32f12a72fb
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+$ sudo docker stop my-nginx
+my-nginx
+$ sudo docker rm my-nginx
+my-nginx
+$ sudo docker run -d -p 80:80 --name my-nginx nginx:latest
+3b862e47fa74d89b20a126092e4a42fdc59dd60daf37909536cc8360b4a0aad2
